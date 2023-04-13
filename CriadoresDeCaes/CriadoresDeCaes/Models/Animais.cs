@@ -52,7 +52,7 @@ namespace CriadoresDeCaes.Models
         public Racas Raca { get; set; }
 
         /// <summary>
-        /// FK para o Criador do cão
+        /// FK para o Criador do cão 
         /// </summary>
         [ForeignKey(nameof(Criador))]
         public int AnimalFK { get; set; }

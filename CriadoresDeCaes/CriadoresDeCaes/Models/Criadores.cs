@@ -8,7 +8,8 @@ namespace CriadoresDeCaes.Models
     public class Criadores {
 
         public Criadores() { 
-            ListaAnimais = new HashSet<Animais>();   
+            ListaAnimais = new HashSet<Animais>();
+            ListaRacas = new HashSet<Racas>();
         }
         public int Id { get; set; }
         /// <summary>
@@ -40,5 +41,9 @@ namespace CriadoresDeCaes.Models
         /// FK para a lista de cães, propriedade do criador
         /// </summary>
         public ICollection<Animais> ListaAnimais { get; set; }
+        /// <summary>
+        /// Lista das Raças de um determinado Criador
+        /// </summary>
+        public ICollection<Racas> ListaRacas { get; set; }
     }
 }
