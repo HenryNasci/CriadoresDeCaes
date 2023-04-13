@@ -1,9 +1,15 @@
-﻿namespace CriadoresDeCaes.Models
+﻿using System.Collections.Generic;
+
+namespace CriadoresDeCaes.Models
 {
     /// <summary>
     /// desrição dos criadores dos animais
     /// </summary>
     public class Criadores {
+
+        public Criadores() { 
+            ListaAnimais = new HashSet<Animais>();   
+        }
         public int Id { get; set; }
         /// <summary>
         /// Nome do Criador
@@ -29,5 +35,10 @@
         /// Endereço de email do criador
         /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// FK para a lista de cães, propriedade do criador
+        /// </summary>
+        public ICollection<Animais> ListaAnimais { get; set; }
     }
 }

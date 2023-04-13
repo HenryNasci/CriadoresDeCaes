@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CriadoresDeCaes.Models
 {
@@ -6,6 +7,11 @@ namespace CriadoresDeCaes.Models
     /// Descrição dos animais
     /// </summary>
     public class Animais {
+
+        public Animais() { 
+            ListaFotografias = new HashSet<Fotografias>();
+        }
+
         public int Id { get; set; }
         /// <summary>
         /// Nome do animal
@@ -29,5 +35,11 @@ namespace CriadoresDeCaes.Models
         /// Numero de registo no LOP
         /// </summary>
         public string NumLOP { get; set; }
+
+        //****************************************
+
+        public ICollection<Fotografias> ListaFotografias { get; set; }
+
+
     }
 }
