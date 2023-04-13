@@ -23,8 +23,20 @@ namespace CriadoresDeCaes.Models
         public string Local { get; set; }
 
         //******************************************************
+
+        /// <summary>
+        /// FK para indentificar o Animal a quem a Fotografia pertence
+        /// </summary>
         [ForeignKey(nameof(Animal))] // <=> [ForeignKey("Animal")]
         public int AnimalFK { get; set; }
         public Animais Animal { get; set; }
+        /*
+         * o uso de [anotadores] permite alterar o comportamento dos 'objetos' do nosso programa:
+         *  - atributos
+         *  - funções (metodos)
+         *  - classes
+         */
+
+
     }
 }
